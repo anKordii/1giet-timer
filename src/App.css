@@ -1,9 +1,12 @@
-* {
-  /*background-color: #1e2026;*/
+:root{
+  --outline-color: #000;
 }
 .App {
   text-align: center;
   color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.discordapp.com/attachments/1041443734216261632/1050177594072502373/1579807036567-08_28_2019_HOW_I_INFILTRATED_A_CHINESE_DRUG_LAB_CV.png");
   background-color: #1e2026;
 }
 

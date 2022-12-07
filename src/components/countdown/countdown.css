@@ -10,12 +10,14 @@
 }
 
 .hourglass img {
-  height: 90%;
+  pointer-events: none;
+  max-width: 100%;
+  height: auto;
   mix-blend-mode: lighten;
 }
 
 .container {
-  color: white;
+  color: #000;
   display: flex;
   width: 100vw;
   height: 100vh;
@@ -45,9 +47,19 @@
 }
 
 .countDown {
-  margin-top: 2vw;
+  color: white;
+  margin-top: 4vw;
   font-size: calc(3vw + 3vh + 3vmin);
   font-weight: bold;
+  /* text-shadow:
+    -5px -5px 0 var(--outline-color),
+     0   -5px 0 var(--outline-color),
+     5px -5px 0 var(--outline-color),
+     5px  0   0 var(--outline-color),
+     5px  5px 0 var(--outline-color),
+     0    5px 0 var(--outline-color),
+    -5px  5px 0 var(--outline-color),
+    -5px  0   0 var(--outline-color); */
 }
 
 .countDown-label {

@@ -27,6 +27,10 @@ export default () => {
         }
         updateCountDown();
 
+        setInterval(() => {
+            updateCountDown() 
+        }, 1000);
+
     }, [])
 
     const zeroPad = (num, places) => String(num).padStart(places, '0')
@@ -34,12 +38,11 @@ export default () => {
     return (
         <div className='container'>
             <div className='hourglass'>
-                <img src={hourGlass} alt="gif"></img>
+                <img src={hourGlass} alt="gif" style={{zIndex: "2"}}></img>
             </div>
             <div className='texts'>
-                <h2>Gotowi na</h2>
-                <h1 style={{color: "#79d9f2"}}>1giet 2.0?</h1>
-                <div className='countDown'>
+                <img src="https://cdn.discordapp.com/attachments/1041443734216261632/1050170655313776780/13.png" style={{maxWidth: "100%", height: "auto", position: "absolute", right: 0}} />
+                <div className='countDown' data-content={zeroPad(days,2) + ' : ' + zeroPad(hours,2) + ' : ' + zeroPad(minutes,2) + " : " + zeroPad(seconds,2) }  style={{zIndex: "2"}}>
                 {zeroPad(days,2) + ' : ' + zeroPad(hours,2) + ' : ' + zeroPad(minutes,2) + " : " + zeroPad(seconds,2) } 
                     <div className='countDown-label'>
                         <div>
@@ -56,9 +59,7 @@ export default () => {
                         </div> 
                     </div>
                 </div>
-                <h2>
-                    już niedługo!
-                </h2>
+                <h2 style={{zIndex: "2", fontWeight: "normal", color: "#fff"}}><strong>1giet</strong> is back <strong>!</strong></h2>
             </div>
         </div>
     )
