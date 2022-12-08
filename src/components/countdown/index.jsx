@@ -16,7 +16,7 @@ export default () => {
             minute = second * 60,
             hour = minute * 60,
             day = hour * 24;
-            let endDate = '12/16/2022';
+            let endDate = '12/17/2022';
             const countDown = new Date(endDate).getTime();    
             const now = new Date().getTime();
             let distance = countDown - now;
@@ -37,6 +37,11 @@ export default () => {
 
     return (
         <div className='container'>
+            <div className="anis_cover_wrap">
+                <video autoPlay muted loop className='anis_cover'>
+                    <source src="/bg.mp4" type="video/mp4" />
+                </video>
+            </div>
             <div className='hourglass'>
                 <img src={hourGlass} alt="gif" style={{zIndex: "2"}}></img>
             </div>
